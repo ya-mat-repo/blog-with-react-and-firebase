@@ -1,5 +1,8 @@
-### Install packages
-npm install
+# Blog app with react and firebase
+これはReactとFirebaseで作成したブログアプリです。
 
-### Start dev server
-npm start
+# Installation
+$ npm install
+
+# Usage
+$ npm start
