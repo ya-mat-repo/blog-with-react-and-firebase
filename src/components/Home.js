@@ -11,10 +11,12 @@ const Home = () => {
       setPostList(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     };
     getPosts();
-  });
+  }, []);
 
   const handleDelete = async (id) => {
     await deleteDoc(doc(db, 'posts', id));
+    const data = await getDocs(collection(db, 'posts'));
+    setPostList(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
   };
 
   return (
