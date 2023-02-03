@@ -1,6 +1,7 @@
 {
   "name": "blog-with-react-and-firebase",
   "version": "0.1.0",
+  "homepage": "/blog-app",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
