@@ -11,23 +11,23 @@ import {
 const Navbar = ({ isAuth }) => {
   return (
     <nav>
-      <Link to="/">
+      <Link to={process.env.REACT_APP_BASE_DIR}>
         <FontAwesomeIcon icon={faHouse} />
         ホーム
       </Link>
       {isAuth ? (
         <>
-          <Link to="/createpost">
+          <Link to={`${process.env.REACT_APP_BASE_DIR}/createpost`}>
             <FontAwesomeIcon icon={faFilePen} />
             記事投稿
           </Link>
-          <Link to="/logout">
+          <Link to={`${process.env.REACT_APP_BASE_DIR}/logout`}>
             <FontAwesomeIcon icon={faArrowRightToBracket} />
             ログアウト
           </Link>
         </>
       ) : (
-        <Link to="/login">
+        <Link to={`${process.env.REACT_APP_BASE_DIR}/login`}>
           <FontAwesomeIcon icon={faArrowRightToBracket} />
           ログイン
         </Link>
