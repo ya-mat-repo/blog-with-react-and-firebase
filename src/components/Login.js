@@ -10,7 +10,7 @@ const Login = ({ setIsAuth }) => {
     signInWithPopup(auth, provider).then((result) => {
       localStorage.setItem('isAuth', true);
       setIsAuth(true);
-      navigate('/');
+      navigate(process.env.REACT_APP_BASE_DIR);
     });
   };
 
