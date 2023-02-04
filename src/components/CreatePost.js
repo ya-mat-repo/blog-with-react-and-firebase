@@ -11,7 +11,7 @@ const CreatePost = ({ isAuth }) => {
 
   useEffect(() => {
     if (!isAuth) {
-      navigate('/login');
+      navigate(`${process.env.REACT_APP_BASE_DIR}/login`);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -25,7 +25,7 @@ const CreatePost = ({ isAuth }) => {
         id: auth.currentUser.uid,
       },
     });
-    navigate('/');
+    navigate(process.env.REACT_APP_BASE_DIR);
   };
 
   return (
